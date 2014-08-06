@@ -16,7 +16,7 @@ package one.async.joiner;
 public abstract class CallbackLatch {
 
 	final int expected;
-	volatile int received;
+	Integer received;
 	volatile boolean failed;
 
 	/**
@@ -54,6 +54,7 @@ public abstract class CallbackLatch {
 
 		this.expected = expected;
 		this.failed = false;
+		this.received = 0;
 
 		if (expected == 0) {
 			onCompleted();
