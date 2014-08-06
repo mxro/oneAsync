@@ -27,7 +27,7 @@ import de.mxro.fn.collections.IdentityArrayList;
  * @param <GInput>
  * @param <GOutput>
  */
-public class ListCallbackJoiner<GInput, GOutput> {
+public class CallbackMap<GInput, GOutput> {
 	final Map<Integer, GOutput> responseMap;
 	final List<GInput> messages;
 	final int expectedSize;
@@ -68,7 +68,7 @@ public class ListCallbackJoiner<GInput, GOutput> {
 		};
 	}
 
-	public ListCallbackJoiner(final List<GInput> messages,
+	public CallbackMap(final List<GInput> messages,
 			final ListCallback<GOutput> callback) {
 		super();
 		this.messages = new IdentityArrayList<GInput>(messages);
