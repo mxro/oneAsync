@@ -31,9 +31,11 @@ public abstract class CallbackLatch {
 	 * Call this method when an expected callback has been received.
 	 */
 	public void registerSuccess() {
-		received++;
-		if (!failed && received == expected) {
-			onCompleted();
+		synchronized (received) {
+			received++;
+			if (!failed && received == expected) {
+				onCompleted();
+			}
 		}
 	}
 
