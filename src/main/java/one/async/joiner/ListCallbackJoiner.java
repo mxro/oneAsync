@@ -11,8 +11,9 @@ import java.util.List;
 import java.util.Map;
 
 import de.mxro.async.callbacks.ListCallback;
+import de.mxro.async.callbacks.ValueCallback;
+import de.mxro.fn.collections.CollectionsUtils;
 import de.mxro.fn.collections.IdentityArrayList;
-import one.async.utils.OneAsyncUtils;
 
 /**
  * This utility class supports in writing Java in a more asynchronous style.
@@ -32,16 +33,16 @@ public class ListCallbackJoiner<GInput, GOutput> {
 	final int expectedSize;
 	final ListCallback<GOutput> callback;
 
-	public LocalCallback<GOutput> createCallback(final GInput message) {
-		return new LocalCallback<GOutput>() {
+	public ValueCallback<GOutput> createCallback(final GInput message) {
+		return new ValueCallback<GOutput>() {
 
 			@Override
 			public void onSuccess(final GOutput response) {
 				synchronized (responseMap) {
 					responseMap.put(messages.indexOf(message), response);
 
-					if (OneAsyncUtils.isMapComplete(responseMap, expectedSize)) {
-						final List<GOutput> localResponses = OneAsyncUtils
+					if (CollectionsUtils.isMapComplete(responseMap, expectedSize)) {
+						final List<GOutput> localResponses = CollectionsUtils
 								.toOrderedList(responseMap);
 
 						callback.onSuccess(localResponses);
