@@ -7,6 +7,7 @@
 	<version>0.1.0</version>
 	<description>Utility methods and classes to develop asynchronous applications.</description>
 	<url>https://github.com/mxro/oneAsync</url>
+	
 	<properties>
 		<module.gwtVersion>2.2.0</module.gwtVersion>
 		<module.draftCompile>true</module.draftCompile>
