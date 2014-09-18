@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<groupId>one.async</groupId>
 	<artifactId>oneAsync</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<description>Utility methods and classes to develop asynchronous applications.</description>
 	<url>https://github.com/mxro/oneAsync</url>
 	
@@ -50,7 +50,6 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
-
 
 	</dependencies>
 
