@@ -28,8 +28,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>de.mxro.async</groupId>
-			<artifactId>async-api</artifactId>
+			<groupId>org.javadelight</groupId>
+			<artifactId>delight-async</artifactId>
 			<version>0.0.8</version>
 		</dependency>
 
