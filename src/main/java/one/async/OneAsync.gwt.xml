@@ -8,7 +8,7 @@
 	<!-- <inherits name='com.google.common.Guava'></inherits> -->
 
 	<inherits name='one.utils.OneUtils'></inherits>
-	<inherits name='de.mxro.async.Async'></inherits>
+	<inherits name='delight.async.Async'></inherits>
 
 	<!-- Specify the app entry point class. -->
 	<entry-point class='one.async.internal.DummyEntryPoint' />
