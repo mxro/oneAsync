@@ -3,7 +3,7 @@ oneAsync
 
 Utilities for asynchronous Java apllications.
 
-**NOTE:** This project has been superseded by the project [async-api](https://github.com/mxro/async-api). 
+**Deprication Notice:** This project has been superseded by the project [async-api](https://github.com/mxro/async-api). 
 
 ## Maven Reports
 
